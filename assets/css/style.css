@@ -1,0 +1,33 @@
+body{
+    display:flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main{
+    flex: 1 0 auto;
+}
+.nav-wrapper{
+    background-color:#191970 ;
+}
+.brand-logo{
+    font-family:"Lobster", cursive;
+    margin-left:5%;
+}
+.title{
+    color:#778899;
+    text-align: center;
+}
+
+#categories{
+    margin:20px;
+    background-color: #191970;
+
+}
+.page-footer{
+    background-color: #191970;
+}
+.container{
+    width: 100%;
+    max-width: unset;
+}
