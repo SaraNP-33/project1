@@ -23,7 +23,7 @@ var nutritionURL = "https://api.spoonacular.com/recipes/parseIngredients?apiKey=
  * See also: https://spoonacular.com/food-api/docs#Search-Recipes-Complex
  * @param {Object} query - An associative array mapping search keys and data. Arrays are automatically converted to comma-separated values.
  * @param {number} count - The number of results to return
- * 
+ * @param {}
  */
 function searchComplex(query, count=10) {
   let queryString = `apiKey=${apiKey}`;
@@ -31,7 +31,7 @@ function searchComplex(query, count=10) {
     let queryData = Array.isArray(query[key]) ? query[key].join(",") : query[key];
     queryString += `&${key}=${queryData}`
   }
-  
+
   let queryURL = `https://api.spoonacular.com/recipes/complexSearch?${queryString}`;
   return queryURL
 }
