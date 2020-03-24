@@ -9,3 +9,13 @@ $( document ).ready(function(){
 
 // use Api ingredient list options to have the user choose their ingredients. 
 //dispaly on html as checkboxes - modal when clicking on the link to choose ingredients. 
+
+let APIKEY = "b2abcf1f7aa34932bae5417c700268ec";
+  var queryURL = "https://api.spoonacular.com/recipes/search?query=burger"+"&apiKey="+APIKEY
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+    console.log(queryURL);
+  });
