@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 
 
-const apiKey = "b2abcf1f7aa34932bae5417c700268ec";
+const apiKey = "04492eb88c824a2387827e71857a0cf6";
 
 /**
  * Performs a complex recipe search.
@@ -65,7 +65,7 @@ function displayRecipe(recipe) {
 
   $("#recipeName").text(recipe.title);
   $("#recipeImg").attr("src",recipe.image);
-  $("#prepareTime").text(recipe.preparationMinutes);
+  $("#prepareTime").text("Total Prepare Time: " , recipe.preparationMinutes);
   $("#cookTime").text(recipe.cookingMinutes);
   $("#readyMin").text(recipe.readyInMinutes);
   $("#recipeSummary").text(recipe.summary);
