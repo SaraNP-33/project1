@@ -1,0 +1,15 @@
+.aboutus{
+padding:25px;
+}
+
+h4{
+    shape-outside: square ();
+    margin:20px 30px 30px 0;
+    line-height:1.9em;
+    color:#778899;
+}
+
+h2{
+    color:#778899;
+    text-align: center;
+}

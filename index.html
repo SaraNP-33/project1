@@ -6,72 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Easy Recipes</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!----------Link to google fonts--------->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">  
+    
+   <!-------------------------------link to google icon through Materialize------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--------------------------------------Link to Materilize css----------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!---------------------------------------jQuery Links------------------------------------------->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.js"></script>
+    <script -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+
+    <!------------------------------------------Materilize js Link----------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<!------------------------------------------------CSS file Link-------------------------------------->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.js"></script>
-
-
+   
 </head>
 
 <body>
-    <nav>
+    <header>
+      <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Homepage</a></li>
-                <li><a href="badges.html">Our Recipes</a></li>
-                <li><a href="collapsible.html">About Us</a></li>
-                <li> <input id="search" type="search" required>
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i></li>
-            </ul>
-           
+          <a href="#!" class="brand-logo">Recipes4U!</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="ourrecipes.html">Recipes</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="ourrecipes.html">Recipes</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
         </div>
-    </nav>
-    <div id="header-wrapper">
-        <div id="header" class="container">
-            <div id="logo">
-                <h1><a href="#">Easy Recipes</a></h1>
-            </div>
+      </nav>
+    </header>
 
-        </div>
-    </div>
-    <div id="wrapper2">
-        <div id="welcome" class="container">
+    <main>
+  
+    
+        <div id="welcome">
             <div class="title">
-                <h2>Welcome to our website</h2>
+                <h2>Start Cooking Today</h2>
+                <p>Browse the categories below, or search for your own recipes. </p>
             </div>
         </div>
-    </div>
-    <div id="wrapper3">
-        <div id="three-column" class="container">
-            <div><span class="arrow-down"></span></div>
-            <div id="tbox1"> <span class="icon icon-wrench"></span>
+    
+    
                 <div class="title">
-                    <h2>Maecenas luctus</h2>
-                </div>
-                <p>Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Duis pretium velit ac suscipit
-                    mauris. Proin eu wisi suscipit nulla suscipit interdum.</p>
-                <a href="#" class="button">Learn More</a>
-            </div>
-            <div id="tbox2"> <span class="icon icon-cogs"></span>
-                <div class="title">
-                    <h2>Integer gravida</h2>
-                </div>
-                <p>Proin eu wisi suscipit nulla suscipit interdum. Nullam non wisi a sem semper suscipit eleifend. Donec
-                    mattis libero eget urna. Duis pretium velit ac mauris.</p>
-                <a href="#" class="button">Learn More</a>
-            </div>
-            <div id="tbox3"> <span class="icon icon-legal"></span>
-                <div class="title">
-                    <h2>Praesent mauris</h2>
-                </div>
+                    <h4>Categories</h4>
+                    </div>
 
-                <div id="copyright" class="container">
-                </div>
+                    <div class="row container">
+                        <div class="col s4 m4">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="./assets/images/italian-1082230_640.jpg">
+                              <span class="card-title">Get your Spaghetti on!</span>
+                            </div>
+                            <div class="card-content">
+                              <p>Easy Pasta Recipes.</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="#">Recipes Here!</a>
+                            </div>
+                            </div>
+                        </div>
+                         
+                     
+                     
+                        <div class="col s4 m4">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="./assets/images/food-3270461_640.jpg">
+                              <span class="card-title">Veggilicious!</span>
+                            </div>
+                            <div class="card-content">
+                              <p>Simple and easy vegetarian recipes.</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="#">Recipes Here!</a>
+                            </div>
+                          </div>
+                        </div>
+                    
+                    
+                        <div class="col s4 m4">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="./assets/images/duck-1292383_640.jpg" >
+                              <span class="card-title">Chicken Time!</span>
+                            </div>
+                            <div class="card-content">
+                              <p>Master Chicken dishes with these recipes</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="#">Recipes Here!</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                      <div id= "button">
+                      <a class="waves-effect waves-light btn" id="category-btn">More Categories</a>
+                    </div>
+                    </main>
+
+                      <footer class="page-footer">
+            
+                        <div class="footer-copyright">
+                          <div class="container" id="copyright">
+                          © 2020 Copyright
+                        </div>
+                         
+                         
+                       
+                      </footer>
+                          
 
                 <script src="assets/javascript/app.js"></script>
 </body>
