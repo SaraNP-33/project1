@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Our Recipes</title>
+    <title> Your Recipes</title>
+
     
   <!----------Link to google fonts--------->
   <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Archivo|Montserrat+Alternates|Passion+One&display=swap" rel="stylesheet">
     
   <!-------------------------------link to google icon through Materialize------------------------->
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
    <!--------------------------------------Link to Materilize css----------------------------->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" integrity="sha256-13EKEXRsynh3cmmNF1dlW6uvoC1SZVaW94bIHZQJoMU=" crossorigin="anonymous"></script> 
    <!---------------------------------------jQuery Links------------------------------------------->
   
    <script
@@ -22,11 +24,12 @@
 
    <!------------------------------------------Materilize js Link----------------------------------->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js" integrity="sha256-6DDZX77BrYnAmK9a3N3tvNPtyTIk1q1w9iW+UBtot3Y=" crossorigin="anonymous"></script>
 <!------------------------------------------------CSS file Link-------------------------------------->
    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
    <link rel="stylesheet" type="text/css" href="./assets/css/recipes.css">
 </head>
+
 <body>
   <nav>
     <div class="nav-wrapper">
@@ -53,7 +56,7 @@
             </div>
             <nav>
                 <div class="nav-wrapper" id="searchBar">
-                  <form>
+                  <form id="searchForm">
                     <div class="input-field">
                       <input id="search" type="search" required>
                       <label class="label-icon" for="search"><i class="material-icons">search</i></label>
@@ -92,9 +95,24 @@
               </footer>
                   
   
-      
+              <!-- This modal displays recipe data -->
+              <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h4 id="recipeName">Modal Header</h4>
+                <img id="recipeImg">
+                <p id="prepareTime"></p>
+                <p id="cookTime"></p>
+                <p id="readyMin"></p>
+                <p id="recipeSummary"></p>
+                <p id="recipeURL"></p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+              </div>
+            </div>
        
-            
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/search.js"></script>
+    
 </body>
 </html>

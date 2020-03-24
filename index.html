@@ -1,7 +1,7 @@
 <!Doctype html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,15 +14,19 @@
 
     <!--------------------------------------Link to Materilize css----------------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" integrity="sha256-13EKEXRsynh3cmmNF1dlW6uvoC1SZVaW94bIHZQJoMU=" crossorigin="anonymous" />
     <!---------------------------------------jQuery Links------------------------------------------->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.js"></script>
-    <script -->
+
+  
+    src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+=======
+   
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+
 
     <!------------------------------------------Materilize js Link----------------------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js" integrity="sha256-6DDZX77BrYnAmK9a3N3tvNPtyTIk1q1w9iW+UBtot3Y=" crossorigin="anonymous"></script>
 <!------------------------------------------------CSS file Link-------------------------------------->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
    
@@ -30,11 +34,16 @@
 
 <body>
     <header>
+   
+
       <nav>
+
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo">Recipes4U!</a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
+
+          
             <li><a href="index.html">Homepage</a></li>
             <li><a href="categories.html">Categories</a></li>
             <li><a href="ourrecipes.html">Recipes</a></li>
@@ -45,10 +54,12 @@
             <li><a href="categories.html">Categories</a></li>
             <li><a href="ourrecipes.html">Recipes</a></li>
             <li><a href="aboutus.html">About Us</a></li>
+
           </ul>
         </div>
       </nav>
     </header>
+   
 
     <main>
   
@@ -76,7 +87,7 @@
                               <p>Easy Pasta Recipes.</p>
                             </div>
                             <div class="card-action">
-                              <a href="#">Recipes Here!</a>
+                              <a href="#modal1" class="modal-trigger show-recipe" data-recipe-index="spaghetti">Recipes Here!</a>
                             </div>
                             </div>
                         </div>
@@ -93,7 +104,9 @@
                               <p>Simple and easy vegetarian recipes.</p>
                             </div>
                             <div class="card-action">
-                              <a href="#">Recipes Here!</a>
+
+                              <a href="#modal1" class="modal-trigger show-recipe" data-recipe-index="veggie">Recipes Here!</a>
+
                             </div>
                           </div>
                         </div>
@@ -109,27 +122,50 @@
                               <p>Master Chicken dishes with these recipes</p>
                             </div>
                             <div class="card-action">
-                              <a href="#">Recipes Here!</a>
+                              <a href="#modal1" class="modal-trigger show-recipe" data-recipe-index="chicken">Recipes Here!</a>
                             </div>
                           </div>
                         </div>
+
+                      </div>
+                    </div>
+                  
+
                     </div>
                       <div id= "button">
                       <a class="waves-effect waves-light btn" id="category-btn">More Categories</a>
                     </div>
+
                     </main>
 
                       <footer class="page-footer">
-            
-                        <div class="footer-copyright">
-                          <div class="container" id="copyright">
-                          © 2020 Copyright
+                           <div class="footer-copyright">
+                         <div class="container" id="copyright">
+                           © 2020 Copyright Text
+                           </div>
                         </div>
+                        
+                     </footer>
+
                          
-                         
-                       
-                      </footer>
-                          
+                    
+                      
+                      
+                      <!-- This modal displays recipe data -->
+                      <div id="modal1" class="modal">
+                        <div class="modal-content">
+                          <h4 id="recipeName">Modal Header</h4>
+                          <img id="recipeImg">
+                          <p id="prepareTime"></p>
+                          <p id="cookTime"></p>
+                          <p id="readyMin"></p>
+                          <p id="recipeSummary"></p>
+                          <p id="recipeURL"></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                        </div>
+                      </div>
 
                 <script src="assets/javascript/app.js"></script>
 </body>
