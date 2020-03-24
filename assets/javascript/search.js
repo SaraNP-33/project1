@@ -1,85 +1,70 @@
 
 
+
+let APIKEY = "84b16d63a51a4acb921b68dd844ae213";
+  var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query="+"&addRecipeNutrition=true&number=2&apiKey="+APIKEY
+
 function recipeSearch(){
-  let searchTerm = $("#search").val().trim();
 
- searchComplex({
-   "query": `${searchTerm}`
- }).then(function(response) {   
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+   console.log(response);
+    console.log(queryURL);
 
-  for (i = 0; i < response.results.length; i++) {
-    // XXX Do something with the data, maybe store it?
+    var recipes = response.results;
+
+   
+  for (i = 0; i < recipes.length; i++) {
+    
+    
+    var card = $("div class=col s6 m6>","<div class=card>","<div class=card-image>","<div class=card-title","<div class=card-content>","<div class=card-action");
+
+    $(".row").append(card);
+
   }
+
+  var image = $("<img>").attr("src",response.results.image);
+  $(".card-image").append(image);
+
+  //variable to store Time to Prepare//
+
+  var preparetime = $("<p>").text(response.results.preparationMinutes);
   
-  // FIXME Display recipe 0 in the modal
-  displayRecipe(response.results[0]);
-  $("#modal1").openModal();
+  //attach to html//
 
+  $(".card-content").append(preparetime);
 
-//   for (i = 0; i < 2; i++) {
-//     var recipes = response.results;
+  //variable to store Time to Cook//
 
-//     var row = $();
+  var cooktime = $("<p>").text(response.results.cookingMinutes);
 
-//     var col = $();
+  //attach to html//
 
-//     var card = $("<div class=row>","div class=col s12 m7>","<div class=card>","<div class=card-image>","<div class=card-title","<div class=card-content>","<div class=card-action");
+  $(".card-content").append(cooktime);
 
-//     var cardimage = $();
+  //variable to store ready in minutes//
 
-//     var cardtitle = $("");
+  var readyminutes = $("<p>").text(response.results.readyInMinutes);
+console.log(readyminutes);
+  //attach to html//
 
-//     var cardcontent = $();
+  $(".card-content").append(readyminutes);
 
-//     var cardaction = $();
+  //variable to store summery//
 
+  var summary = $("<p>").text(response.results.summary);
 
-//   }
+  //variable to store link//
 
-//   var image = $("<img>").attr("src",response.results.image);
-//   $(".card-image").append(image);
+var link = $("<a>").attr("href",response.results.soureUrl);
 
-//   //variable to store Time to Prepare//
+//attach to html//
 
-//   var preparetime = $("<p>").text(response.results.preparationMinutes);
-  
-//   //attach to html//
+$(".card-action").append(link);
+});
+}
 
-//   $(".card-content").append(preparetime);
+$("#searchBar").on("click",recipeSearch);
 
-//   //variable to store Time to Cook//
-
-//   var cooktime = $("<p>").text(response.results.cookingMinutes);
-
-//   //attach to html//
-
-//   $(".card-content").append(cooktime);
-
-//   //variable to store ready in minutes//
-
-//   var readyminutes = $("<p>").text(response.results.readyInMinutes);
-// console.log(readyminutes);
-//   //attach to html//
-
-//   $(".card-content").append(readyminutes);
-
-//   //variable to store summery//
-
-//   var summary = $("<p>").text(response.results.summary);
-
-//   //variable to store link//
-
-// var link = $("<a>").attr("href",response.results.sourceUrl);
-
-// //attach to html//
-
-// $(".card-action").append(link);
-// });
-// }
-
-// Trigger search if the user changes the field and unfocuses or submits
-$("#search").change(recipeSearch);
-// Prevent the form from submitting
-$("#searchForm").submit(function(event) {
-  event.preventDefault()
-})})};
