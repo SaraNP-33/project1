@@ -1,5 +1,7 @@
 
-
+$( document ).ready(function(){
+  $(".button-collapse").sideNav();
+});
 
 let APIKEY = "84b16d63a51a4acb921b68dd844ae213";
   var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query="+"&addRecipeNutrition=true&number=2&apiKey="+APIKEY
