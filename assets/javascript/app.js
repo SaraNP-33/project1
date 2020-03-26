@@ -133,7 +133,7 @@ $(".show-recipe").click(function() {
   displayRecipe(recipe);
 
 })
-})
+
 
 //ajax call to get photo + name to populate card
 
